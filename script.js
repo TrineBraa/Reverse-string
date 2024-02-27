@@ -19,20 +19,21 @@ function updateView() {
 
 //Controll
 function reverseInput() {
-    let sentence = document.getElementById("userInput").Value;
+    let sentence = document.getElementById("userInput").value;
     reverseThisText = textChanger(sentence);
-    document.getElementById("showText").innerHTML = `${reverseThisText}`;
+    document.getElementById("showText").innerHTML = reverseThisText;
 }
 
 
 function textChanger(string) {
     let reversed = "";
 
-    for (let i = string.length; i = 0; i--) {
-        reversed = string[i];
+    for (let i = string.length; i >= 0; i--) {
+        reversed += string.charAt(i);
     }
-    return reversed;
     console.log(reversed)
+    return reversed;
+
 }
 
 
